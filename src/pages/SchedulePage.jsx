@@ -1,13 +1,14 @@
 import React from 'react'
 import Body from '../components/Body'
 import { Container } from 'react-bootstrap'
-import DriverInfo from '../components/DriverInfo'
+import Schedule from '../components/Schedule'
 
-export default function DriverInfoPage() {
+
+export default function SchedulePage() {
   return (
     <Body>
         <Container>
-            <DriverInfo/>
+            <Schedule/>
         </Container>
     </Body>
   )

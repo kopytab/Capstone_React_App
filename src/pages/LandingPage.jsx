@@ -5,7 +5,7 @@ import Body from "../components/Body";
 
 export default function LandingPage() {
   return (
-<Body sidebar>
+<Body>
 
     <Container>
         <Landing/>
