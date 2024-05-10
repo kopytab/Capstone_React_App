@@ -13,7 +13,7 @@ export default function IndTeamInfo( {teamInfo}) {
       <div class="col">
         <h4>Driver 1: {teamInfo.driver1}</h4>
         <h4>Driver 2: {teamInfo.driver2}</h4>
-        <h4>Team Cheif: {teamInfo.teamcheif}</h4>
+        <h4>Team Chief: {teamInfo.teamcheif}</h4>
       </div>
       <div class="col">
 

@@ -15,7 +15,7 @@ export default function FastestPitstops() {
     }, [])
 
     async function getPitstops() {
-        const res = await fetch('http://127.0.0.1:5000/pitstops')
+        const res = await fetch('https://pw141-f1-capstone-db.onrender.com/pitstops')
         if (res.ok) {
             const data = await res.json();
             console.log(data);

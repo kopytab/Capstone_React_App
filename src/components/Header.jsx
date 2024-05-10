@@ -1,13 +1,19 @@
 import Navbar from 'react-bootstrap/Navbar'
 import Container from "react-bootstrap/Container"
 import { Link } from 'react-router-dom'
-import { NavDropdown } from 'react-bootstrap'
+import { NavDropdown, NavLink } from 'react-bootstrap'
+
+import { UserContext } from '../contexts/UserContext'
+import { useContext } from 'react'
 
 export default function Header() {
+
+  const { user } = useContext (UserContext)
+
   return (
     <Navbar sticky="top" data-bs-theme='dark' className='main-heading'>
       <Container>
-        <Navbar.Brand className='headtext'>F1 Fan Zone</Navbar.Brand>
+        <Navbar.Brand className='headtext'>F1 Frenzy</Navbar.Brand>
           <Link className='a:link' to="/">Home</Link>
           <Link className='a:link' to="/schedule">Schedule</Link>
           <Link className='a:link' to="/driverinfo">Driver Info</Link>
@@ -19,6 +25,17 @@ export default function Header() {
             <br/>
             <Link className='a:link m-3' to='/driverstandings'>Driver Standings</Link>
           </NavDropdown>
+          {
+          !user.accessToken ?
+            <>
+              <NavLink as={Link} to={'/register'}>Register</NavLink>
+              <NavLink as={Link} to={'/login'}>Login</NavLink>
+            </> :
+            <>
+            <NavLink as={Link} to={'/feed'}>Feed</NavLink>
+            <NavLink as={Link} to={'/logout'}>Logout</NavLink>
+            </>
+        }
       </Container>
           
     </Navbar>

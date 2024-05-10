@@ -15,7 +15,7 @@ export default function DriverStandings() {
     }, [])
 
     async function getDriverStand() {
-        const res = await fetch('http://127.0.0.1:5000/driverstandings')
+        const res = await fetch('https://pw141-f1-capstone-db.onrender.com/driverstandings')
         if (res.ok) {
             const data = await res.json();
             console.log(data);

@@ -12,6 +12,10 @@ import FastestPitstopsPage from "./pages/FastestPitstopsPage"
 import TeamInfoPage from "./pages/TeamInfoPage"
 import ConstructorStandingsPage from "./pages/ConstructorStandingsPage"
 import DriverStandingsPage from "./pages/DriverStandingsPage"
+import RegisterPage from "./pages/RegisterPage"
+import LoginPage from "./pages/LoginPage"
+import Logout from "./components/Logout"
+import FeedPage from "./pages/FeedPage"
 
 
 export default function App() {
@@ -28,6 +32,10 @@ export default function App() {
         <Route path="/constructorinfo" element={<TeamInfoPage/>}/>
         <Route path="/constructorstandings" element={<ConstructorStandingsPage/>}/>
         <Route path="/driverstandings" element={<DriverStandingsPage/>}/>
+        <Route path="/register" element={<RegisterPage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/logout" element={<Logout/>}/>
+        <Route path="/feed" element={<FeedPage/>}/>
 
       </Routes>
     </Container>

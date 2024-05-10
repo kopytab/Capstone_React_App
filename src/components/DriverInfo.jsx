@@ -15,7 +15,7 @@ export default function DriverInfo() {
     }, [])
 
     async function getDriverInfo() {
-        const res = await fetch('http://127.0.0.1:5000/driverinfo')
+        const res = await fetch('https://pw141-f1-capstone-db.onrender.com/driverinfo')
         if (res.ok) {
             const data = await res.json();
             console.log(data);
